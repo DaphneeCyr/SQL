@@ -1,0 +1,40 @@
+--Create a clothing store database
+
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, aisle INTEGER);
+
+INSERT INTO store VALUES (1, "hat", 10, 50, 1);
+INSERT INTO store VALUES (2, "sunglasses", 12, 75, 1);
+INSERT INTO store VALUES (3, "coats", 45, 30, 5);
+INSERT INTO store VALUES (4, "longsleeve", 35, 60, 2);
+INSERT INTO store VALUES (5, "tshirt", 25, 52, 2);
+INSERT INTO store VALUES (6, "tanktop", 13, 74, 3);
+INSERT INTO store VALUES (7, "swimsuits", 27, 33, 3);
+INSERT INTO store VALUES (8, "pants", 40, 35, 4);
+INSERT INTO store VALUES (9, "shorts", 30, 46, 4);
+INSERT INTO store VALUES (10, "underwear", 15, 51, 5);
+INSERT INTO store VALUES (11, "pyjamas", 38, 29, 5);
+INSERT INTO store VALUES (12, "socks", 5, 85, 6);
+INSERT INTO store VALUES (13, "shoes", 35, 40, 6);
+INSERT INTO store VALUES (14, "bags", 15, 27, 7);
+INSERT INTO store VALUES (15, "accessories", 6, 48, 7);
+
+
+--Display the database ordered by price
+
+SELECT * FROM store 
+ORDER BY price DESC;
+
+
+--How many items are in each aisles?
+
+SELECT aisle, SUM(quantity) 
+FROM store 
+GROUP BY aisle
+
+--What items costs 15$ or less?
+
+SELECT name, price 
+FROM store 
+WHERE price <= 15 
+ORDER BY price desc;
