@@ -52,4 +52,15 @@ INSERT INTO Marriages (actor1_id, actor2_id)
 VALUES (4,8);
 
 
+--Which Actors are married to each other?
+
+SELECT a.fullname, b.fullname FROM Marriages
+JOIN Actors AS a
+ON actor1_id = a.id
+JOIN Actors AS b
+ON actor2_id = b.id;
+
+
+
+
 
