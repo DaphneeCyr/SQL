@@ -60,6 +60,16 @@ ON actor1_id = a.id
 JOIN Actors AS b
 ON actor2_id = b.id;
 
+--Which movie is the oldest and what actors play a role in them?
+
+
+SELECT m.title, a.fullname, m.year_released FROM Movies AS m
+LEFT OUTER JOIN Actors AS a
+ON a.id = m.actor_id
+
+GROUP BY title
+ORDER BY year_released ASC;
+
 
 
 
