@@ -1,4 +1,4 @@
-/* Create table about the people and what they do here */
+/* Create multiple tables about actors including movies they've done and which are married to each other */
 
 CREATE TABLE Actors (id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, sex TEXT, age INTEGER);
 
@@ -21,24 +21,21 @@ VALUES ("William Bradley Pitt", "Male", 59);
 
 
 
-CREATE TABLE Movies (id INTEGER PRIMARY KEY AUTOINCREMENT, actor_id INTEGER, title TEXT, year_released INTEGER);
+CREATE TABLE Movies (id INTEGER PRIMARY KEY AUTOINCREMENT, actor1_id INTEGER,actor2_id INTEGER, Title TEXT, Year_released INTEGER);
 
-INSERT INTO Movies (actor_id, title, year_released)
-VALUES (2, "Honey", 2003);
-INSERT INTO Movies (actor_id, title, year_released)
-VALUES (1, "Ali", 2001);
-INSERT INTO Movies (actor_id, title, year_released)
-VALUES (3, "Bad moms", 2016);
-INSERT INTO Movies (actor_id, title, year_released)
-VALUES (4, "Mr. & Mrs. Smith", 2005);
-INSERT INTO Movies (actor_id, title, year_released)
-VALUES (5, "Ali", 2001);
-INSERT INTO Movies (actor_id, title, year_released)
-VALUES (6, "Ghost in the Shell", 2017);
-INSERT INTO Movies (actor_id, title, year_released)
-VALUES (7, "Butterfly effect", 2004);
-INSERT INTO Movies (actor_id, title, year_released)
-VALUES (8, "Mr. & Mrs. Smith", 2005);
+INSERT INTO Movies (actor1_id, actor2_id, title, year_released)
+VALUES (2, NULL, "Honey", 2003);
+INSERT INTO Movies (actor1_id, actor2_id, title, year_released)
+VALUES (1, 5, "Ali", 2001);
+INSERT INTO Movies (actor1_id, actor2_id, title, year_released)
+VALUES (3, NULL, "Bad moms", 2016);
+INSERT INTO Movies (actor1_id, actor2_id, title, year_released)
+VALUES (4, 8, "Mr. & Mrs. Smith", 2005);
+INSERT INTO Movies (actor1_id, actor2_id, title, year_released)
+VALUES (6, NULL, "Ghost in the Shell", 2017);
+INSERT INTO Movies (actor1_id, actor2_id, title, year_released)
+VALUES (7, NULL, "Butterfly effect", 2004);
+
 
 
 
@@ -70,6 +67,14 @@ LEFT OUTER JOIN Actors AS b
 ON b.id = m.actor2_id
 GROUP BY title
 ORDER BY year_released ASC;
+
+
+
+
+
+
+
+
 
 
 
