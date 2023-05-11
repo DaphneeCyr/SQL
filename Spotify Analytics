@@ -80,4 +80,16 @@ WHERE speechiness > (SELECT AVG (speechiness) FROM BIT_DB.Spotifydata)
 ORDER BY speechiness DESC;
 
 
+--Calculate the average popularity for the artists in the Spotify data table. 
+--Then, for every artist with an average popularity of 90 or above, 
+--show their name, their average popularity, and label them as a “Top Star”.
+
+WITH popularity_average AS
+(SELECT SP.artist_name, AVG(SP.popularity) AS Average_popularity
+FROM Spotifydata AS SP
+GROUP BY SP.artist_name)
+SELECT artist_name, Average_popularity, 'Top Star' AS Label
+FROM popularity_average
+WHERE Average_popularity >= 90;
+
 
