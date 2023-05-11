@@ -30,7 +30,7 @@ Next, I explored the data using the following SQL.
 
 
 
---What is the average populqrity, danceability, energy by artist and track?
+--What is the average popularity, danceability, energy by artist and track?
 
 SELECT artist_name, track_name, avg(popularity), avg(danceability), avg(energy)
 FROM BIT_DB.spotifydata
