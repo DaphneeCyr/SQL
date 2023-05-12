@@ -1,6 +1,6 @@
-/* Source:
-  https://www.kaggle.com/nasa/astronaut-yearbook
-*/
+In this SQL I am querying information from a database provided by Kaggle.
+
+/* Source: https://www.kaggle.com/nasa/astronaut-yearbook */
 
 CREATE TABLE astronauts(
    Name                TEXT PRIMARY KEY,
