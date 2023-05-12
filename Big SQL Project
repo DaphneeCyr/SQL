@@ -1,3 +1,6 @@
+In this SQL I am querying the database to highlight interesting information about the data.
+
+
 --Show Customers (their full names, customer ID, and country) who are not in the US.
 SELECT FirstName, LastName, CustomerID, Country
 FROM customers
