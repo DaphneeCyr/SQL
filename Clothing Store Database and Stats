@@ -1,4 +1,4 @@
---Create a clothing store database
+--In this SQL I am creating a clothing store database and querying some information about the database.
 
 
 CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, aisle INTEGER);
