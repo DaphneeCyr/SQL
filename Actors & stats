@@ -1,4 +1,4 @@
-/* Create multiple tables about actors including movies they've done and which are married to each other */
+--In this SQL I am creating multiple tables about actors including movies they've done and which actors are married to each other
 
 CREATE TABLE Actors (id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, sex TEXT, age INTEGER);
 
