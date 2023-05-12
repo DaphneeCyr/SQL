@@ -21,7 +21,6 @@ WHERE c.Country = 'Brazil';
 SELECT * FROM employees
 WHERE title = 'Sales Support Agent';
 
---Show a list of Employees who were hired after this date.
 
 --Find a unique list of billing countries from the Invoice table.
 SELECT DISTINCT BillingCountry 
